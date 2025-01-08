@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron", serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #424242;
+
+}
+
+.digital-clock{
+    height: 210px;
+    width: 700px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    border-radius: 2rem;
+    user-select: none;
+    padding: 0 0 0 2rem;
+    border: 0.5rem solid #2d2d2d;
+    position: relative;
+}
+
+
+.week{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    color: #2d2d2d;
+    font-weight: bold;
+}
+
+.week .active{
+    color: white;
+}
+
+.time{
+    font-family: "Orbitron", serif;
+    margin: 0 0 0 3rem;
+}
+
+.dot{
+    z-index: -1;
+    animation: flicker 1s infinite ease-in-out;
+    visibility: hidden
+
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.visible{
+    visibility: visible;
+}
+
+@keyframes flicker {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.hour,
+.min,
+.dot{
+    display: inline-block;
+    font-size: 13rem;
+}
+
+.min{
+    display: math;
+}
+
+.invsible{
+    visibility: hidden;
+}
+
+.on-off{
+    display: flex;
+    background-color: #2d2d2d;
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    top: -20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#displayed{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    width: 96%;
+    border-radius: 2rem;
+    position: absolute;
+}
+
+
+button{
+    background-color: #d84141;
+    color: #ffffff;
+    border: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
