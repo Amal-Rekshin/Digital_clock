@@ -115,15 +115,23 @@ body{
     justify-content: center;
     text-align: center;
     align-items: center;
+    transition: all 1s;
+
 }
 
 #displayed h1{
     font-size: 10rem;
-    animation: blink 3s ease-in-out infinite;
+}
+
+.animate{
+    animation: blink 3s ease-in-out 1s infinite;
 }
 
 @keyframes blink {
     0%{
+        opacity: 1;
+    }
+    20%{
         opacity: 1;
     }
     50%{
