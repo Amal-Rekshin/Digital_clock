@@ -17,8 +17,8 @@ body{
 }
 
 .digital-clock{
-    height: 210px;
-    width: 700px;
+    /* height: 210px;
+    width: 700px; */
     background-color: #000;
     color: #fff;
     display: flex;
@@ -47,7 +47,7 @@ body{
 
 .time{
     font-family: "Orbitron", serif;
-    margin: 0 0 0 3rem;
+    margin: 0 0 0 2rem;
 }
 
 .dot{
@@ -86,6 +86,7 @@ body{
 
 .min{
     display: math;
+    padding: 0 25px 0 0;
 }
 
 .invsible{
@@ -111,8 +112,27 @@ body{
     width: 96%;
     border-radius: 2rem;
     position: absolute;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
+#displayed h1{
+    font-size: 10rem;
+    animation: blink 3s ease-in-out infinite;
+}
+
+@keyframes blink {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 button{
     background-color: #d84141;
