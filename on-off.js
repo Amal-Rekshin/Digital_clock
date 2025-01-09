@@ -1,12 +1,13 @@
 const Powerbtn = document.getElementById("switchBtn");
 const display = document.getElementById("displayed");
-const dots = document.getElementsByClassName("dot"); 
+const dots = document.getElementsByClassName("dot");
+const offBtn = document.getElementById("switchOff");
 
 Powerbtn.addEventListener("click", () => {
     const currentBgColor = getComputedStyle(display).backgroundColor;
 
     if (currentBgColor === "rgb(0, 0, 0)") {
-
+        offBtn.innerHTML = "";
         display.style.backgroundColor = "transparent";
         Powerbtn.textContent = "ON";
         Powerbtn.style.backgroundColor = "green";
@@ -16,7 +17,7 @@ Powerbtn.addEventListener("click", () => {
         dot.classList.add("visible");
         });
     } else {
-
+        offBtn.innerHTML = "OFF";
         display.style.backgroundColor = "rgb(0, 0, 0)";
         Powerbtn.textContent = "OFF";
         Powerbtn.style.backgroundColor = "red";
