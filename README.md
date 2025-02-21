@@ -11,7 +11,7 @@ This project is a **Digital Clock** web application that displays the current ti
 - Fully responsive and minimalist design.
 
 ## Demo
-[Live Demo](amal-rekshin.github.io/Digital_clock/)
+[Live Demo](https://whitish-calculator.netlify.app/)
 
 ## File Structure
 ```
